@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        ladoUno = Number(prompt("Ingrese el primer lado"));
+        ladoDos = Number(prompt("Ingrese el segundo lado"));
+        ladoTres = Number(prompt("Ingrese el tercer lado"));
+
+        //valido que los datos ingresados sean numeros
+        if ( Number.isNaN(ladoUno) || Number.isNaN(ladoDos) || Number.isNaN(ladoTres) ) {
+            console.log("Los lados ingresados son incorrectos, recargue la pagina y vuelva a intentarlo");
+        }
+        else{
+            //valido que los numeros sean mayores a 0
+            if ((ladoUno>0) && (ladoDos>0) && (ladoTres>0)) {
+                if (  (ladoUno == ladoDos) && (ladoDos ==ladoTres)   ) {
+                    console.log("Los lados definen un triangulo EQUILATERO");
+                }else{
+                    if ( (ladoUno==ladoDos) || (ladoDos == ladoTres) || (ladoTres == ladoUno) ) {
+                    console.log("Los lados definen un triangulo ISOSCELES");
+                    }else{
+                        console.log("Los lados definen un triangulo ESCALENO");
+                    }
+                }
+                
+            } else {
+                console.log("Los datos ingresados deben ser positivos, recargue la pagina y vuelva a intentarlo");
+            }
+        }
+        
+    </script>
+</body>
+</html>
